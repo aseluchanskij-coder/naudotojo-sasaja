@@ -1,5 +1,9 @@
 :root{
     --primary-color: #6cd7e6;
+    --secondary-color: #659da3;
+    --dark-color: #172f33;
+    --grey-color: #647070;
+    --darkgrey-color: #303c3d;
 }
 
 
@@ -158,4 +162,51 @@ nav li{
 .stats .grid p{
     font-size: 20px;
     font-weight: bold;
+}
+
+/* cli */
+.cli .grid{
+    grid-template-columns: repeat(3, 1fr); /* jei tik sitas, gausis grid is 3 stulpeliu, kad butu img per du stulpelius pridedame dar*/
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2
+}
+
+/*greitis*/
+
+.greitis .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+/*markes*/
+
+.marke .card img {
+    width: 80px;
+    height: 60px;
+    object-fit: contain;
+    margin: 10px auto;
+    display: block;
+}
+
+.marke .flex{
+    flex-wrap: wrap;
+}
+
+.marke .card{
+    width: 180px;
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+
+.marke .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.marke .card:hover{
+    transform: translateY(-15px);
 }
